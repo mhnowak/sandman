@@ -7,5 +7,6 @@ defmodule MorpheusWeb.Router do
 
   scope "/api", MorpheusWeb do
     pipe_through :api
+    resources "/products", ProductController, except: [:new, :edit]
   end
 end
