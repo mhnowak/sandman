@@ -21,28 +21,46 @@ defmodule MorpheusWeb.ProductController do
   end
 
   def show(conn, %{"id" => id}) do
-    product = Products.get_product!(id)
+    case Products.get_product(id) do
+      {:ok, product} ->
+        render(conn, :show, product: product)
 
-    if product.is_deleted do
-      conn |> put_status(:not_found) |> render(:item_deleted, product: product)
-    else
-      render(conn, :show, product: product)
+      {:error, :deleted} ->
+        conn |> put_status(:not_found) |> json("Item has been deleted")
+
+      _ ->
+        conn |> put_status(:not_found)
     end
   end
 
   def update(conn, %{"id" => id, "product" => product_params}) do
-    product = Products.get_product!(id)
+    case Products.get_product(id) do
+      {:ok, %Product{} = product} ->
+        with {:ok, product} <-
+               Products.update_product(product, product_params) do
+          render(conn, :show, product: product)
+        end
 
-    with {:ok, %Product{} = product} <- Products.update_product(product, product_params) do
-      render(conn, :show, product: product)
+      {:error, :deleted} ->
+        conn |> put_status(:not_found) |> json("Item has been deleted")
+
+      _ ->
+        conn |> put_status(:not_found)
     end
   end
 
   def delete(conn, %{"id" => id}) do
-    product = Products.get_product!(id)
+    case Products.get_product(id) do
+      {:ok, product} ->
+        with {:ok, %Product{}} <- Products.delete_product(product) do
+          send_resp(conn, :no_content, "")
+        end
 
-    with {:ok, %Product{}} <- Products.delete_product(product) do
-      send_resp(conn, :no_content, "")
+      {:error, :deleted} ->
+        conn |> put_status(:not_found) |> json("Item has been deleted")
+
+      _ ->
+        conn |> put_status(:not_found)
     end
   end
 end
