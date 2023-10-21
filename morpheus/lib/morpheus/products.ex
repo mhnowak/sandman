@@ -23,19 +23,19 @@ defmodule Morpheus.Products do
 
   @doc """
   Gets a single product.
-
-  Raises `Ecto.NoResultsError` if the Product does not exist.
-
-  ## Examples
-
-      iex> get_product!(123)
-      %Product{}
-
-      iex> get_product!(456)
-      ** (Ecto.NoResultsError)
-
   """
-  def get_product!(id), do: Repo.get!(Product, id)
+  def get_product(id) do
+    case Repo.get(Morpheus.Products.Product, id) do
+      nil ->
+        {:error, :not_found}
+
+      %Product{is_deleted: true} = _product ->
+        {:error, :deleted}
+
+      product ->
+        {:ok, product}
+    end
+  end
 
   @doc """
   Creates a product.
