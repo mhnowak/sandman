@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9044BC192AE52E0E00B0FDCB /* deliriumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044BC182AE52E0E00B0FDCB /* deliriumApp.swift */; };
+		9044BC1B2AE52E0E00B0FDCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044BC1A2AE52E0E00B0FDCB /* ContentView.swift */; };
+		9044BC1D2AE52E0F00B0FDCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9044BC1C2AE52E0F00B0FDCB /* Assets.xcassets */; };
+		9044BC212AE52E0F00B0FDCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9044BC202AE52E0F00B0FDCB /* Preview Assets.xcassets */; };
+		9044BC2B2AE52E0F00B0FDCB /* deliriumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044BC2A2AE52E0F00B0FDCB /* deliriumTests.swift */; };
+		9044BC352AE52E0F00B0FDCB /* deliriumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044BC342AE52E0F00B0FDCB /* deliriumUITests.swift */; };
+		9044BC372AE52E0F00B0FDCB /* deliriumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044BC362AE52E0F00B0FDCB /* deliriumUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9044BC272AE52E0F00B0FDCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9044BC0D2AE52E0E00B0FDCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9044BC142AE52E0E00B0FDCB;
+			remoteInfo = delirium;
+		};
+		9044BC312AE52E0F00B0FDCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9044BC0D2AE52E0E00B0FDCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9044BC142AE52E0E00B0FDCB;
+			remoteInfo = delirium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9044BC152AE52E0E00B0FDCB /* delirium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delirium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9044BC182AE52E0E00B0FDCB /* deliriumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deliriumApp.swift; sourceTree = "<group>"; };
+		9044BC1A2AE52E0E00B0FDCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9044BC1C2AE52E0F00B0FDCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9044BC1E2AE52E0F00B0FDCB /* delirium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = delirium.entitlements; sourceTree = "<group>"; };
+		9044BC202AE52E0F00B0FDCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9044BC262AE52E0F00B0FDCB /* deliriumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deliriumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9044BC2A2AE52E0F00B0FDCB /* deliriumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deliriumTests.swift; sourceTree = "<group>"; };
+		9044BC302AE52E0F00B0FDCB /* deliriumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deliriumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9044BC342AE52E0F00B0FDCB /* deliriumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deliriumUITests.swift; sourceTree = "<group>"; };
+		9044BC362AE52E0F00B0FDCB /* deliriumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deliriumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9044BC122AE52E0E00B0FDCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9044BC232AE52E0F00B0FDCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9044BC2D2AE52E0F00B0FDCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9044BC0C2AE52E0E00B0FDCB = {
+			isa = PBXGroup;
+			children = (
+				9044BC172AE52E0E00B0FDCB /* delirium */,
+				9044BC292AE52E0F00B0FDCB /* deliriumTests */,
+				9044BC332AE52E0F00B0FDCB /* deliriumUITests */,
+				9044BC162AE52E0E00B0FDCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9044BC162AE52E0E00B0FDCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9044BC152AE52E0E00B0FDCB /* delirium.app */,
+				9044BC262AE52E0F00B0FDCB /* deliriumTests.xctest */,
+				9044BC302AE52E0F00B0FDCB /* deliriumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9044BC172AE52E0E00B0FDCB /* delirium */ = {
+			isa = PBXGroup;
+			children = (
+				9044BC182AE52E0E00B0FDCB /* deliriumApp.swift */,
+				9044BC1A2AE52E0E00B0FDCB /* ContentView.swift */,
+				9044BC1C2AE52E0F00B0FDCB /* Assets.xcassets */,
+				9044BC1E2AE52E0F00B0FDCB /* delirium.entitlements */,
+				9044BC1F2AE52E0F00B0FDCB /* Preview Content */,
+			);
+			path = delirium;
+			sourceTree = "<group>";
+		};
+		9044BC1F2AE52E0F00B0FDCB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9044BC202AE52E0F00B0FDCB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9044BC292AE52E0F00B0FDCB /* deliriumTests */ = {
+			isa = PBXGroup;
+			children = (
+				9044BC2A2AE52E0F00B0FDCB /* deliriumTests.swift */,
+			);
+			path = deliriumTests;
+			sourceTree = "<group>";
+		};
+		9044BC332AE52E0F00B0FDCB /* deliriumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9044BC342AE52E0F00B0FDCB /* deliriumUITests.swift */,
+				9044BC362AE52E0F00B0FDCB /* deliriumUITestsLaunchTests.swift */,
+			);
+			path = deliriumUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9044BC142AE52E0E00B0FDCB /* delirium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9044BC3A2AE52E0F00B0FDCB /* Build configuration list for PBXNativeTarget "delirium" */;
+			buildPhases = (
+				9044BC112AE52E0E00B0FDCB /* Sources */,
+				9044BC122AE52E0E00B0FDCB /* Frameworks */,
+				9044BC132AE52E0E00B0FDCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = delirium;
+			productName = delirium;
+			productReference = 9044BC152AE52E0E00B0FDCB /* delirium.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9044BC252AE52E0F00B0FDCB /* deliriumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9044BC3D2AE52E0F00B0FDCB /* Build configuration list for PBXNativeTarget "deliriumTests" */;
+			buildPhases = (
+				9044BC222AE52E0F00B0FDCB /* Sources */,
+				9044BC232AE52E0F00B0FDCB /* Frameworks */,
+				9044BC242AE52E0F00B0FDCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9044BC282AE52E0F00B0FDCB /* PBXTargetDependency */,
+			);
+			name = deliriumTests;
+			productName = deliriumTests;
+			productReference = 9044BC262AE52E0F00B0FDCB /* deliriumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9044BC2F2AE52E0F00B0FDCB /* deliriumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9044BC402AE52E0F00B0FDCB /* Build configuration list for PBXNativeTarget "deliriumUITests" */;
+			buildPhases = (
+				9044BC2C2AE52E0F00B0FDCB /* Sources */,
+				9044BC2D2AE52E0F00B0FDCB /* Frameworks */,
+				9044BC2E2AE52E0F00B0FDCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9044BC322AE52E0F00B0FDCB /* PBXTargetDependency */,
+			);
+			name = deliriumUITests;
+			productName = deliriumUITests;
+			productReference = 9044BC302AE52E0F00B0FDCB /* deliriumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9044BC0D2AE52E0E00B0FDCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					9044BC142AE52E0E00B0FDCB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					9044BC252AE52E0F00B0FDCB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 9044BC142AE52E0E00B0FDCB;
+					};
+					9044BC2F2AE52E0F00B0FDCB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 9044BC142AE52E0E00B0FDCB;
+					};
+				};
+			};
+			buildConfigurationList = 9044BC102AE52E0E00B0FDCB /* Build configuration list for PBXProject "delirium" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9044BC0C2AE52E0E00B0FDCB;
+			productRefGroup = 9044BC162AE52E0E00B0FDCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9044BC142AE52E0E00B0FDCB /* delirium */,
+				9044BC252AE52E0F00B0FDCB /* deliriumTests */,
+				9044BC2F2AE52E0F00B0FDCB /* deliriumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9044BC132AE52E0E00B0FDCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9044BC212AE52E0F00B0FDCB /* Preview Assets.xcassets in Resources */,
+				9044BC1D2AE52E0F00B0FDCB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9044BC242AE52E0F00B0FDCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9044BC2E2AE52E0F00B0FDCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9044BC112AE52E0E00B0FDCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9044BC1B2AE52E0E00B0FDCB /* ContentView.swift in Sources */,
+				9044BC192AE52E0E00B0FDCB /* deliriumApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9044BC222AE52E0F00B0FDCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9044BC2B2AE52E0F00B0FDCB /* deliriumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9044BC2C2AE52E0F00B0FDCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9044BC372AE52E0F00B0FDCB /* deliriumUITestsLaunchTests.swift in Sources */,
+				9044BC352AE52E0F00B0FDCB /* deliriumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9044BC282AE52E0F00B0FDCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9044BC142AE52E0E00B0FDCB /* delirium */;
+			targetProxy = 9044BC272AE52E0F00B0FDCB /* PBXContainerItemProxy */;
+		};
+		9044BC322AE52E0F00B0FDCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9044BC142AE52E0E00B0FDCB /* delirium */;
+			targetProxy = 9044BC312AE52E0F00B0FDCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9044BC382AE52E0F00B0FDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9044BC392AE52E0F00B0FDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		9044BC3B2AE52E0F00B0FDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = delirium/delirium.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"delirium/Preview Content\"";
+				DEVELOPMENT_TEAM = 7W4G6CN5VA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.delirium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9044BC3C2AE52E0F00B0FDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = delirium/delirium.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"delirium/Preview Content\"";
+				DEVELOPMENT_TEAM = 7W4G6CN5VA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.delirium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9044BC3E2AE52E0F00B0FDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7W4G6CN5VA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deliriumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/delirium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/delirium";
+			};
+			name = Debug;
+		};
+		9044BC3F2AE52E0F00B0FDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7W4G6CN5VA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deliriumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/delirium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/delirium";
+			};
+			name = Release;
+		};
+		9044BC412AE52E0F00B0FDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7W4G6CN5VA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deliriumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = delirium;
+			};
+			name = Debug;
+		};
+		9044BC422AE52E0F00B0FDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7W4G6CN5VA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deliriumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = delirium;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9044BC102AE52E0E00B0FDCB /* Build configuration list for PBXProject "delirium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9044BC382AE52E0F00B0FDCB /* Debug */,
+				9044BC392AE52E0F00B0FDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9044BC3A2AE52E0F00B0FDCB /* Build configuration list for PBXNativeTarget "delirium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9044BC3B2AE52E0F00B0FDCB /* Debug */,
+				9044BC3C2AE52E0F00B0FDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9044BC3D2AE52E0F00B0FDCB /* Build configuration list for PBXNativeTarget "deliriumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9044BC3E2AE52E0F00B0FDCB /* Debug */,
+				9044BC3F2AE52E0F00B0FDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9044BC402AE52E0F00B0FDCB /* Build configuration list for PBXNativeTarget "deliriumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9044BC412AE52E0F00B0FDCB /* Debug */,
+				9044BC422AE52E0F00B0FDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9044BC0D2AE52E0E00B0FDCB /* Project object */;
+}
