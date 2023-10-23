@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var appCoordinator = AppCoordinator(path: NavigationPath())
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        NavigationStack(path: $appCoordinator.path) {
+            appCoordinator.build().navigationDestination(for: ProductsFlowCoordinator.self) {
+                coordinator in coordinator.build()
+            }
+        }               
     }
 }
 
