@@ -1,0 +1,286 @@
+{
+  "info": {
+    "version": "1.0",
+    "title": "Morpheus"
+  },
+  "host": "localhost:4000",
+  "definitions": {
+    "Product": {
+      "example": {
+        "description": "mama",
+        "id": 123,
+        "image_url": "some_url.com",
+        "title": "Joe"
+      },
+      "properties": {
+        "description": {
+          "description": "Description of a product",
+          "type": "string"
+        },
+        "id": {
+          "description": "Product ID",
+          "type": "integer"
+        },
+        "image_url": {
+          "description": "Image url of a product",
+          "type": "string"
+        },
+        "title": {
+          "description": "Title of a product",
+          "type": "string"
+        }
+      },
+      "required": [
+        "image_url",
+        "description",
+        "title"
+      ],
+      "title": "Product",
+      "type": "object"
+    },
+    "ProductRequest": {
+      "example": {
+        "description": "mama",
+        "image_url": "some_url.com",
+        "title": "Joe"
+      },
+      "properties": {
+        "description": {
+          "description": "Description of a product",
+          "type": "string"
+        },
+        "image_url": {
+          "description": "Image url of a product",
+          "type": "string"
+        },
+        "title": {
+          "description": "Title of a product",
+          "type": "string"
+        }
+      },
+      "required": [
+        "image_url",
+        "description",
+        "title"
+      ],
+      "title": "ProductRequest",
+      "type": "object"
+    }
+  },
+  "paths": {
+    "/api/products": {
+      "get": {
+        "deprecated": false,
+        "description": "List all products in the database",
+        "operationId": "MorpheusWeb.ProductController.index",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "examples": {
+              "application/json": {
+                "data": [
+                  {
+                    "description": "mama",
+                    "id": 1,
+                    "image_url": "some_url.com",
+                    "title": "Joe"
+                  },
+                  {
+                    "description": "joe",
+                    "id": 2,
+                    "image_url": "some_url.com",
+                    "title": "Mama"
+                  }
+                ]
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        },
+        "summary": "List of Products",
+        "tags": [
+          "Product"
+        ]
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Creates a new product",
+        "operationId": "MorpheusWeb.ProductController.create",
+        "parameters": [
+          {
+            "description": "The product details",
+            "in": "body",
+            "name": "product",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/ProductRequest"
+            },
+            "x-example": {
+              "user": {
+                "description": "Joe1@mail.com",
+                "image_url": "some_image.com",
+                "title": "Joe"
+              }
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "User created OK",
+            "examples": {
+              "application/json": {
+                "data": {
+                  "description": "Joe1@mail.com",
+                  "id": 1,
+                  "image_url": "some_image.com",
+                  "title": "Joe"
+                }
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        },
+        "summary": "Create product",
+        "tags": [
+          "Product"
+        ]
+      }
+    },
+    "/api/products/{id}": {
+      "delete": {
+        "description": "Delete a product by ID",
+        "operationId": "MorpheusWeb.ProductController.delete",
+        "parameters": [
+          {
+            "description": "Product ID",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 3
+          }
+        ],
+        "responses": {
+          "203": {
+            "description": "No Content - Deleted Successfully"
+          }
+        },
+        "summary": "Delete Product",
+        "tags": [
+          "Product"
+        ]
+      },
+      "get": {
+        "description": "Show a product by ID",
+        "operationId": "MorpheusWeb.ProductController.show",
+        "parameters": [
+          {
+            "description": "Product ID",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 123
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "examples": {
+              "application/json": {
+                "data": {
+                  "description": "mama",
+                  "id": 1,
+                  "image_url": "some_url.com",
+                  "title": "Joe"
+                }
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        },
+        "summary": "Show Product",
+        "tags": [
+          "Product"
+        ]
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Update all attributes of a product",
+        "operationId": "MorpheusWeb.ProductController.update",
+        "parameters": [
+          {
+            "description": "Product ID",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "x-example": 3
+          },
+          {
+            "description": "The product details",
+            "in": "body",
+            "name": "user",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/ProductRequest"
+            },
+            "x-example": {
+              "user": {
+                "description": "mama",
+                "image_url": "some_url.com",
+                "title": "Joe"
+              }
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated Successfully",
+            "examples": {
+              "application/json": {
+                "data": {
+                  "description": "mama",
+                  "id": 1,
+                  "image_url": "some_url.com",
+                  "title": "Joe"
+                }
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        },
+        "summary": "Update product",
+        "tags": [
+          "Product"
+        ]
+      }
+    }
+  },
+  "swagger": "2.0"
+}

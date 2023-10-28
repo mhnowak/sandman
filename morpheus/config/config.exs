@@ -22,6 +22,19 @@ config :morpheus, MorpheusWeb.Endpoint,
   pubsub_server: Morpheus.PubSub,
   live_view: [signing_salt: "OMprGL4P"]
 
+config :morpheus, :phoenix_swagger,
+  swagger_files: %{
+    "priv/static/swagger.json" => [
+      router: MorpheusWeb.Router,
+      endpoint: MorpheusWeb.Endpoint
+    ]
+  }
+
+config :phoenix_swagger, json_library: Jason
+
+config :morpheus, MorpheusWeb.Endpoint,
+  url: [host: "localhost"]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
