@@ -25,7 +25,7 @@ defmodule Morpheus.Products do
   Gets a single product.
   """
   def get_product(id) do
-    case Repo.get(Morpheus.Products.Product, id) do
+    case Repo.get(Product, id) do
       nil ->
         {:error, :not_found}
 
