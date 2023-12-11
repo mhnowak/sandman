@@ -20,7 +20,7 @@ defmodule MorpheusWeb.ProductJSON do
       id: product.id,
       title: product.title,
       description: product.description,
-      image_url: product.image_url,
+      image_url: product.image_url
     }
   end
 

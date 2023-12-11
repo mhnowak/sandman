@@ -32,8 +32,7 @@ config :morpheus, :phoenix_swagger,
 
 config :phoenix_swagger, json_library: Jason
 
-config :morpheus, MorpheusWeb.Endpoint,
-  url: [host: "localhost"]
+config :morpheus, MorpheusWeb.Endpoint, url: [host: "localhost"]
 
 # Configures Elixir's Logger
 config :logger, :console,
