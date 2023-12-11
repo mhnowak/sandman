@@ -21,5 +21,27 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "createProductAppBarTitle":
+            MessageLookupByLibrary.simpleMessage("Add product"),
+        "createProductDescription":
+            MessageLookupByLibrary.simpleMessage("Description"),
+        "createProductFloatingButtonTitle":
+            MessageLookupByLibrary.simpleMessage("Add"),
+        "createProductTitle": MessageLookupByLibrary.simpleMessage("Title"),
+        "genericErrorEmptyField":
+            MessageLookupByLibrary.simpleMessage("Field cannot be empty"),
+        "genericErrorMessage": MessageLookupByLibrary.simpleMessage(
+            "Something went wrong.. Please try again later."),
+        "productActionDelete": MessageLookupByLibrary.simpleMessage("Delete"),
+        "productActionEdit": MessageLookupByLibrary.simpleMessage("Edit"),
+        "productAppBarTitle": MessageLookupByLibrary.simpleMessage("Sandman"),
+        "productDeleteDialogCancel":
+            MessageLookupByLibrary.simpleMessage("Cancel"),
+        "productDeleteDialogConfirm":
+            MessageLookupByLibrary.simpleMessage("Confirm"),
+        "productDeleteDialogTitle": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to delete this product?"),
+        "productsAppBarTitle": MessageLookupByLibrary.simpleMessage("Sandman")
+      };
 }

@@ -49,6 +49,136 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Sandman`
+  String get productsAppBarTitle {
+    return Intl.message(
+      'Sandman',
+      name: 'productsAppBarTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sandman`
+  String get productAppBarTitle {
+    return Intl.message(
+      'Sandman',
+      name: 'productAppBarTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get productActionDelete {
+    return Intl.message(
+      'Delete',
+      name: 'productActionDelete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get productActionEdit {
+    return Intl.message(
+      'Edit',
+      name: 'productActionEdit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete this product?`
+  String get productDeleteDialogTitle {
+    return Intl.message(
+      'Are you sure you want to delete this product?',
+      name: 'productDeleteDialogTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get productDeleteDialogConfirm {
+    return Intl.message(
+      'Confirm',
+      name: 'productDeleteDialogConfirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get productDeleteDialogCancel {
+    return Intl.message(
+      'Cancel',
+      name: 'productDeleteDialogCancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong.. Please try again later.`
+  String get genericErrorMessage {
+    return Intl.message(
+      'Something went wrong.. Please try again later.',
+      name: 'genericErrorMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Field cannot be empty`
+  String get genericErrorEmptyField {
+    return Intl.message(
+      'Field cannot be empty',
+      name: 'genericErrorEmptyField',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add product`
+  String get createProductAppBarTitle {
+    return Intl.message(
+      'Add product',
+      name: 'createProductAppBarTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Title`
+  String get createProductTitle {
+    return Intl.message(
+      'Title',
+      name: 'createProductTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add`
+  String get createProductFloatingButtonTitle {
+    return Intl.message(
+      'Add',
+      name: 'createProductFloatingButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get createProductDescription {
+    return Intl.message(
+      'Description',
+      name: 'createProductDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

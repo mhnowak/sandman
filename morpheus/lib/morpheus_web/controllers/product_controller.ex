@@ -173,12 +173,9 @@ defmodule MorpheusWeb.ProductController do
   end
 
   def update(conn, %{"id" => id, "product" => product_params}) do
-    case Products.get_product(id) do
-      {:ok, %Product{} = product} ->
-        with {:ok, product} <-
-               Products.update_product(product, product_params) do
-          render(conn, :show, product: product)
-        end
+    case Products.update_product(id, product_params) do
+      {:ok, product} ->
+        render(conn, :show, product: product)
 
       {:error, :deleted} ->
         conn |> put_status(:not_found) |> json("Item has been deleted")

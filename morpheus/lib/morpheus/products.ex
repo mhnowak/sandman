@@ -67,10 +67,16 @@ defmodule Morpheus.Products do
       {:error, %Ecto.Changeset{}}
 
   """
-  def update_product(%Product{} = product, attrs) do
-    product
-    |> Product.changeset(attrs)
-    |> Repo.update()
+  def update_product(product_id, attrs) do
+    case Products.get_product(product_id) do
+      {:error, _} = error ->
+        error
+
+      {:ok, product} ->
+        product
+        |> Product.changeset(attrs)
+        |> Repo.update()
+    end
   end
 
   @doc """
