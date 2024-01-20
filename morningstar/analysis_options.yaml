@@ -1,0 +1,25 @@
+include: package:flutter_lints/flutter.yaml
+
+language:
+  strict-casts: true
+errors:
+  missing_required_param: error
+  missing_return: error
+  must_call_super: error
+  parameter_assignments: error
+  todo: ignore
+  omit_local_variable_types: error
+  avoid_renaming_method_parameters: error
+  avoid_classes_with_only_static_members: ignore
+exclude:
+  - "bin/cache/**"
+  - "lib/generated/**"
+  - "lib/**.g.dart"
+
+linter:
+  rules:
+    sort_constructors_first: true
+    prefer_single_quotes: true
+    sort_pub_dependencies: true
+    directives_ordering: true
+    void_checks: false

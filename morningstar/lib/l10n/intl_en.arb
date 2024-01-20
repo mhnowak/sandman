@@ -1,0 +1,21 @@
+{
+    "productsAppBarTitle": "Sandman",
+    "productAppBarTitle": "Sandman",
+    "productActionDelete" : "Delete",
+    "productActionEdit" : "Edit",
+    "productDeleteDialogTitle": "Are you sure you want to delete this product?",
+    "productDeleteDialogConfirm": "Confirm",
+    "productDeleteDialogCancel": "Cancel",
+    "genericErrorMessage": "Something went wrong.. Please try again later.",
+    "genericErrorEmptyField": "Field cannot be empty",
+    "createProductAppBarTitle": "Add product",
+    "updateProductAppBarTitle": "Update product",
+    "createProductTitle": "Title",
+    "createProductFloatingButtonTitle": "Add",
+    "updateProductFloatingButtonTitle": "Update",
+    "createProductInvalidRequestErrorMessage": "Title, description and image cannot be empty",
+    "exceptionInvalidResponseData": "Invalid Response Data Exception",
+    "exceptionInvalidStatusCode": "Invalid status code {code}",
+    "exceptionUnknown": "Unknown exception",
+    "createProductDescription": "Description"
+}
