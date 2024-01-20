@@ -2,30 +2,51 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:morningstar/core/domain/state/data_state.dart';
+import 'package:morningstar/core/presentation/snackbars/error_snackbar.dart';
 import 'package:morningstar/core/presentation/widgets/basic/sm_network_image.dart';
 import 'package:morningstar/core/presentation/widgets/basic/sm_scaffold.dart';
 import 'package:morningstar/dependencies.dart';
 import 'package:morningstar/features/products/domain/models/product_model.dart';
 import 'package:morningstar/features/products/presentation/cubit/delete_product_cubit.dart';
+import 'package:morningstar/features/products/presentation/update_product_page.dart';
 import 'package:morningstar/generated/l10n.dart';
 
-class ProductPage extends StatelessWidget {
+class ProductPage extends StatefulWidget {
   @visibleForTesting
   const ProductPage({
     super.key,
     required this.product,
+    required this.refresh,
   });
 
   static Route getRoute({
     required ProductModel product,
+    required VoidCallback refresh,
   }) =>
       MaterialPageRoute(
           builder: (context) => BlocProvider(
                 create: (context) => sl<DeleteProductCubit>(),
-                child: ProductPage(product: product),
+                child: ProductPage(
+                  product: product,
+                  refresh: refresh,
+                ),
               ));
 
   final ProductModel product;
+  final VoidCallback refresh;
+
+  @override
+  State<ProductPage> createState() => _ProductPageState();
+}
+
+class _ProductPageState extends State<ProductPage> {
+  late ProductModel _product;
+
+  @override
+  void initState() {
+    super.initState();
+    _product = widget.product;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,11 +61,7 @@ class ProductPage extends StatelessWidget {
             if (state case LoadedState<void>()) {
               Navigator.pop(context, true);
             } else if (state case ExceptionState<void>()) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text(s.genericErrorMessage),
-                ),
-              );
+              ErrorSnackbar.show(context, exception: state.exception);
             }
           },
           builder: (context, state) {
@@ -64,7 +81,7 @@ class ProductPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SMNetworkImage(
-              imageUrl: product.imageUrl,
+              imageUrl: _product.imageUrl,
               height: 314,
               width: double.infinity,
               fit: BoxFit.cover,
@@ -73,7 +90,7 @@ class ProductPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text(
-                product.title,
+                _product.title,
                 style: textTheme.titleLarge,
               ),
             ),
@@ -81,7 +98,7 @@ class ProductPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text(
-                product.description,
+                _product.description,
                 style: textTheme.bodySmall,
               ),
             ),
@@ -114,7 +131,7 @@ class ProductPage extends StatelessWidget {
                       _adaptiveAction(
                         context: context,
                         onPressed: () {
-                          deleteCubit.delete(id: product.id);
+                          deleteCubit.delete(id: _product.id);
                           Navigator.pop(context);
                         },
                         child: Text(s.productDeleteDialogConfirm),
@@ -134,7 +151,16 @@ class ProductPage extends StatelessWidget {
               title: Text(s.productActionDelete),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () async {
+                Navigator.pop(context);
+                final result = await Navigator.push(context, UpdateProductPage.getRoute(product: _product));
+                if (result is ProductModel) {
+                  widget.refresh();
+                  setState(() {
+                    _product = result;
+                  });
+                }
+              },
               leading: const Icon(Icons.edit),
               title: Text(s.productActionEdit),
             ),

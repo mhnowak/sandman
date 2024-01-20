@@ -19,14 +19,21 @@ class ProductsPage extends StatelessWidget {
 
     return BlocProvider(
       create: (_) => sl<ProductsCubit>(),
-      child: SMScaffold(
-        title: s.productsAppBarTitle,
-        floatingActionButton: IconButton(
-          onPressed: () => Navigator.push(context, CreateProductPage.getRoute()),
-          icon: const Icon(Icons.add),
-        ),
-        body: const _ProductsView(),
-      ),
+      child: Builder(builder: (context) {
+        return SMScaffold(
+          title: s.productsAppBarTitle,
+          floatingActionButton: IconButton(
+            onPressed: () async {
+              final result = await Navigator.push(context, CreateProductPage.getRoute());
+              if (result is ProductModel && context.mounted) {
+                context.read<ProductsCubit>().load();
+              }
+            },
+            icon: const Icon(Icons.add),
+          ),
+          body: const _ProductsView(),
+        );
+      }),
     );
   }
 }
@@ -60,7 +67,13 @@ class _ProductsView extends StatelessWidget {
               child: InkWell(
                 onTap: () async {
                   final cubit = context.read<ProductsCubit>();
-                  final result = await Navigator.push(context, ProductPage.getRoute(product: product));
+                  final result = await Navigator.push(
+                    context,
+                    ProductPage.getRoute(
+                      product: product,
+                      refresh: () => context.read<ProductsCubit>().load(),
+                    ),
+                  );
                   if (result is bool && result) {
                     cubit.load();
                   }

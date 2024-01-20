@@ -57,6 +57,8 @@ class NetworkManager {
       case 200:
       // TODO: Handle in tests
       case 204:
+      // TODO: Handle in tests
+      case 201:
         break;
       default:
         throw InvalidStatusCodeException(result.statusCode, result.statusMessage);

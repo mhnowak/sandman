@@ -5,7 +5,7 @@ defmodule Morpheus.Products do
 
   import Ecto.Query, warn: false
   alias Morpheus.Repo
-
+  alias Morpheus.Products
   alias Morpheus.Products.Product
 
   @doc """

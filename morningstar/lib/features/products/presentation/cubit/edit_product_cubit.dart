@@ -11,19 +11,11 @@ class EditProductCubit extends Cubit<DataState<ProductModel>> {
   final ProductsRepository _productsRepository;
 
   Future<void> editProduct({
-    required int id,
-    required String title,
-    required String description,
-    required String imageUrl,
+    required ProductModel model,
   }) async {
     emit(const DataState.loading());
     try {
-      final result = await _productsRepository.updateProduct(
-        id: id,
-        title: title,
-        description: description,
-        imageUrl: imageUrl,
-      );
+      final result = await _productsRepository.updateProduct(model: model);
 
       emit(DataState.loaded(result));
     } on SMException catch (e) {

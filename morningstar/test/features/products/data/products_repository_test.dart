@@ -2,12 +2,20 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:morningstar/core/data/network_manager.dart';
 import 'package:morningstar/features/products/data/products_repository.dart';
+import 'package:morningstar/features/products/domain/models/create_product_model.dart';
 import 'package:morningstar/features/products/domain/models/product_model.dart';
 
 import '../../../mock.dart';
 import '../t_products_data.dart';
 
 void main() {
+  const tProduct = ProductModel(
+    id: 1,
+    description: 'test',
+    imageUrl: 'test.com',
+    title: 'test',
+  );
+
   late MockNetworkManager mockNetworkManager;
   late ProductsRepository repository;
 
@@ -39,7 +47,13 @@ void main() {
           queryParams: any(named: 'queryParams'),
         )).thenAnswer((_) async => tProduct1);
 
-    final result = await repository.createProduct(description: 'test', imageUrl: 'test.com', title: 'test');
+    final result = await repository.createProduct(
+      model: const CreateProductModel(
+        description: 'test',
+        imageUrl: 'test.com',
+        title: 'test',
+      ),
+    );
 
     expect(result, tProduct1);
     verify(() => mockNetworkManager.request<ProductModel, ProductModel>(
@@ -59,7 +73,9 @@ void main() {
           queryParams: any(named: 'queryParams'),
         )).thenAnswer((_) async => tProduct1);
 
-    final result = await repository.updateProduct(id: 1, description: 'test', imageUrl: 'test.com', title: 'test');
+    final result = await repository.updateProduct(
+      model: tProduct,
+    );
 
     expect(result, tProduct1);
     verify(() => mockNetworkManager.request<ProductModel, ProductModel>(

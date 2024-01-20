@@ -150,6 +150,16 @@ class S {
     );
   }
 
+  /// `Update product`
+  String get updateProductAppBarTitle {
+    return Intl.message(
+      'Update product',
+      name: 'updateProductAppBarTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Title`
   String get createProductTitle {
     return Intl.message(
@@ -165,6 +175,56 @@ class S {
     return Intl.message(
       'Add',
       name: 'createProductFloatingButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update`
+  String get updateProductFloatingButtonTitle {
+    return Intl.message(
+      'Update',
+      name: 'updateProductFloatingButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Title, description and image cannot be empty`
+  String get createProductInvalidRequestErrorMessage {
+    return Intl.message(
+      'Title, description and image cannot be empty',
+      name: 'createProductInvalidRequestErrorMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid Response Data Exception`
+  String get exceptionInvalidResponseData {
+    return Intl.message(
+      'Invalid Response Data Exception',
+      name: 'exceptionInvalidResponseData',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid status code {code}`
+  String exceptionInvalidStatusCode(Object code) {
+    return Intl.message(
+      'Invalid status code $code',
+      name: 'exceptionInvalidStatusCode',
+      desc: '',
+      args: [code],
+    );
+  }
+
+  /// `Unknown exception`
+  String get exceptionUnknown {
+    return Intl.message(
+      'Unknown exception',
+      name: 'exceptionUnknown',
       desc: '',
       args: [],
     );

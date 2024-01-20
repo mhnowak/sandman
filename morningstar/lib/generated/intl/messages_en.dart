@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(code) => "Invalid status code ${code}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "createProductAppBarTitle":
@@ -28,7 +30,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Description"),
         "createProductFloatingButtonTitle":
             MessageLookupByLibrary.simpleMessage("Add"),
+        "createProductInvalidRequestErrorMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "Title, description and image cannot be empty"),
         "createProductTitle": MessageLookupByLibrary.simpleMessage("Title"),
+        "exceptionInvalidResponseData": MessageLookupByLibrary.simpleMessage(
+            "Invalid Response Data Exception"),
+        "exceptionInvalidStatusCode": m0,
+        "exceptionUnknown":
+            MessageLookupByLibrary.simpleMessage("Unknown exception"),
         "genericErrorEmptyField":
             MessageLookupByLibrary.simpleMessage("Field cannot be empty"),
         "genericErrorMessage": MessageLookupByLibrary.simpleMessage(
@@ -42,6 +52,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm"),
         "productDeleteDialogTitle": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to delete this product?"),
-        "productsAppBarTitle": MessageLookupByLibrary.simpleMessage("Sandman")
+        "productsAppBarTitle": MessageLookupByLibrary.simpleMessage("Sandman"),
+        "updateProductAppBarTitle":
+            MessageLookupByLibrary.simpleMessage("Update product"),
+        "updateProductFloatingButtonTitle":
+            MessageLookupByLibrary.simpleMessage("Update")
       };
 }

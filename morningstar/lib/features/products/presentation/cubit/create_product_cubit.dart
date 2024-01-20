@@ -3,6 +3,7 @@ import 'package:morningstar/core/domain/exceptions/sm_exception.dart';
 import 'package:morningstar/core/domain/exceptions/unknown_exception.dart';
 import 'package:morningstar/core/domain/state/data_state.dart';
 import 'package:morningstar/features/products/data/products_repository.dart';
+import 'package:morningstar/features/products/domain/models/create_product_model.dart';
 import 'package:morningstar/features/products/domain/models/product_model.dart';
 
 class CreateProductCubit extends Cubit<DataState<ProductModel>> {
@@ -11,17 +12,11 @@ class CreateProductCubit extends Cubit<DataState<ProductModel>> {
   final ProductsRepository _productsRepository;
 
   Future<void> createProduct({
-    required String title,
-    required String description,
-    required String imageUrl,
+    required CreateProductModel model,
   }) async {
     emit(const DataState.loading());
     try {
-      final result = await _productsRepository.createProduct(
-        title: title,
-        description: description,
-        imageUrl: imageUrl,
-      );
+      final result = await _productsRepository.createProduct(model: model);
 
       emit(DataState.loaded(result));
     } on SMException catch (e) {
